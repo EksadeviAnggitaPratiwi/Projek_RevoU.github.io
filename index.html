@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Halaman Utama</title>
+    <link rel="stylesheet" href="asset/css//style.css">
+    <script src="asset/js/script.js"></script>
+    <style>
+         #hero{
+            height: 600px;
+            width: 100%;
+            background-image: url(img/toko.jpeg);
+            background-size: cover;
+            /* background-position: 0 20; */
+        }
+    </style>
+</head>
+<body>
+	<header style="background-color: rgb(17, 17, 17);">
+		<div class="container" style="margin: auto;">
+            <nav class="navbar">
+                <img class="header-logo" src="img/logo,jpg">
+                <div class="header-home"><a href="#hero">Home</a> </div>
+                <div class="header-profil"><a href="profil.html">My Profile</a></div>
+                <div class="header-portfolio"><a href="#messageus-id">Message Us</a></div>
+            </nav>
+		</div>
+	</header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-title">
+                        <h1 class="hero-title-2">Hallo <span id="nama-panggil"></span> Selamat Datang Di Website XA THRIFT</h1>
+                        <p class="hero-subtitle">XA THRIFT menyediakan berbagai jenis Blouse, Coat, Kemeja dan lain-lain dengan kualitas yang cukup bagus dan harga yang sangat terjangkau</p>
+                    <!-- <img class="hero-img" src="hero.png" alt="Gambar hero"> -->
+                    </div>
+                </div>
+            </div>
+            <script> 
+            var nama_panggil=prompt("Masukan Nama Anda!");
+            document.getElementById("nama-panggil").innerText = nama_panggil;
+            </script>
+        </section>
+        <section id="product">
+            <div class="container">
+                <h1 class="product-title">Baju Thrift Best Seller <br> XA THRIFT </h1>
+                <div class="product-galery">
+                    <div class="thrift">
+                        <img class="product-thrift" src="img/thrift blouse.jpg" alt="thrift-blouse">
+                        <h3 class="product-subtitle">Thrifting Blouse</h3>
+                        <p class="product-p">Blouse dengan bahan cringkle dengan kualitas bagus</p>
+                    </div>
+                    <div class="thrift">
+                        <img class="product-buket" src="img/thrift coatt.jpg" alt="thrift-coatt">
+                        <h3 class="product-subtitle">Thrifting Coatt</h3>
+                        <p  class="product-p">Coat dengan bahan bludru tebal dengan kualitas bagus</p>
+                    </div>
+                    <div class="thrift">
+                        <img class="product-buket" src="img/thrift kemeja.jpg" alt="thrift-kemeja">
+                        <h3 class="product-subtitle">Thrifting Kemeja</h3>
+                        <p  class="product-p">Kemeja dengan bahan linen dengan kualitas bagus dan tebal</p>
+                    </div>
+                    <!-- <div class="thrift">
+                        <img class="product-thrift" src="thrift coat.jpg" alt="thrift-blouse">
+                        <h3>Buket Uang</h3>
+                    </div> -->
+                </div>
+            </div>
+            <hr class="product-line">
+        </section>
+        <section id="messageus">
+            <div class="containet">
+                <div class="messageus-form">
+                    <div class="form">
+                        <h1 class="messageus-title" id="messageus-id">Message Us</h1>
+                        <!-- <form name="message-form"> -->
+                            <table>
+                                <tr>
+                                    <td><label for="nama">Nama</label></td>
+                                    <td>:</td>
+                                    <td colspan="2"><input type="text" name="text" id="nama"></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="ttl">Tanggal Lahir</label></td>
+                                    <td>:</td>
+                                    <td colspan="2"> <input type="date" name="ttl" id="ttl"><br></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="jk">Jenis Kelamin</label></td>
+                                    <td>:</td>
+                                    <td> <input type="radio" name="jk" id="jk" value="Laki-laki">Laki-laki</td>
+                                    <td><input type="radio" name="jk" id="jk" value="Perempuan">Perempuan</td>
+                                </tr>
+                                <tr>
+                                    <td><label for="pesan">Pesan</label></td>
+                                    <td>:</td>
+                                    <td colspan="2"><textarea name="pesan" id="pesan" cols="20" rows="5"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><button onclick="kirim()" name="submit">Kirim</button></td>
+                                </tr>
+                            </table>   
+                        <!-- </form>  -->
+                    </div>
+                    <div class="validasi">
+                        <h1>Your Message</h1><br>
+                        <p> <b> Waktu       : </b> <span id="send-waktu"></span></p>
+                        <p> <b> Nama        : </b> <span id="send-nama"></span></p>
+                        <p><b>Tanggal Lahir : </b> <span id="send-ttl"></span> </p>
+                        <p><b>Jenis Kelamin : </b> <span id="send-jk"></span> </p>
+                        <p><b>Pesan         : </b> <span id="send-pesan"></span> </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <p class="footer-p">&copy Created By Eksadevi Anggita Pratiwi ~ 2023</p>
+        </div>
+    </footer>
+</body>
+</html>
